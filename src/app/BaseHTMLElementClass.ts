@@ -1,5 +1,5 @@
 export default class BaseHTMLElementClass {
-    private element: HTMLElement;
+    element: HTMLElement;
 
     constructor(tagName: string, classes: string[] = [], textContent: string = '') {
         this.element = document.createElement(tagName);
