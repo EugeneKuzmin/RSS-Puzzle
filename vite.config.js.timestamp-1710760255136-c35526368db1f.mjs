@@ -1,0 +1,18 @@
+// vite.config.js
+import { resolve } from "path";
+import { defineConfig } from "file:///D:/Programming/RSSchool/GitTask01/RSS-Puzzle-Vite/rss-puzzle/node_modules/vite/dist/node/index.js";
+var __vite_injected_original_dirname = "D:\\Programming\\RSSchool\\GitTask01\\RSS-Puzzle-Vite\\rss-puzzle";
+var vite_config_default = defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__vite_injected_original_dirname, "index.html"),
+        login: resolve(__vite_injected_original_dirname, "src/app/login/login.ts")
+      }
+    }
+  }
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcuanMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCJEOlxcXFxQcm9ncmFtbWluZ1xcXFxSU1NjaG9vbFxcXFxHaXRUYXNrMDFcXFxcUlNTLVB1enpsZS1WaXRlXFxcXHJzcy1wdXp6bGVcIjtjb25zdCBfX3ZpdGVfaW5qZWN0ZWRfb3JpZ2luYWxfZmlsZW5hbWUgPSBcIkQ6XFxcXFByb2dyYW1taW5nXFxcXFJTU2Nob29sXFxcXEdpdFRhc2swMVxcXFxSU1MtUHV6emxlLVZpdGVcXFxccnNzLXB1enpsZVxcXFx2aXRlLmNvbmZpZy5qc1wiO2NvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9pbXBvcnRfbWV0YV91cmwgPSBcImZpbGU6Ly8vRDovUHJvZ3JhbW1pbmcvUlNTY2hvb2wvR2l0VGFzazAxL1JTUy1QdXp6bGUtVml0ZS9yc3MtcHV6emxlL3ZpdGUuY29uZmlnLmpzXCI7aW1wb3J0IHsgcmVzb2x2ZSB9IGZyb20gJ3BhdGgnO1xyXG5pbXBvcnQgeyBkZWZpbmVDb25maWcgfSBmcm9tICd2aXRlJztcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGRlZmluZUNvbmZpZyh7XHJcbiAgYnVpbGQ6IHtcclxuICAgIHJvbGx1cE9wdGlvbnM6IHtcclxuICAgICAgaW5wdXQ6IHtcclxuICAgICAgICBtYWluOiByZXNvbHZlKF9fZGlybmFtZSwgJ2luZGV4Lmh0bWwnKSxcclxuICAgICAgICBsb2dpbjogcmVzb2x2ZShfX2Rpcm5hbWUsICdzcmMvYXBwL2xvZ2luL2xvZ2luLnRzJyksXHJcbiAgICAgIH0sXHJcbiAgICB9LFxyXG4gIH0sXHJcbn0pOyJdLAogICJtYXBwaW5ncyI6ICI7QUFBa1gsU0FBUyxlQUFlO0FBQzFZLFNBQVMsb0JBQW9CO0FBRDdCLElBQU0sbUNBQW1DO0FBR3pDLElBQU8sc0JBQVEsYUFBYTtBQUFBLEVBQzFCLE9BQU87QUFBQSxJQUNMLGVBQWU7QUFBQSxNQUNiLE9BQU87QUFBQSxRQUNMLE1BQU0sUUFBUSxrQ0FBVyxZQUFZO0FBQUEsUUFDckMsT0FBTyxRQUFRLGtDQUFXLHdCQUF3QjtBQUFBLE1BQ3BEO0FBQUEsSUFDRjtBQUFBLEVBQ0Y7QUFDRixDQUFDOyIsCiAgIm5hbWVzIjogW10KfQo=
