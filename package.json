@@ -7,12 +7,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint ./src",
+    "lint": "eslint .",
     "lint:fix": "eslint --fix ./src",
     "format":"prettier --write ./scr",
     "ci:format":"prettier --check ./scr",
-    "prepare": "husky",
-    "test": "echo 'No tests specified'"
+    "prepare": "husky"
   },
   "husky": {
     "hooks": {
