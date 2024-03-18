@@ -1,7 +1,8 @@
-import './LoginStyles.css';
+import './loginStyles.css';
 import validateInput from '../utils/validation'
 import BaseHTMLElementClass from '../BaseHTMLElementClass';
 import LocalStorageManager from '../utils/localStorageWorkflow';
+import createWelcomeForm from '../welcome/welcomePage';
 const errorMsg = {
     textName: 'The name can contain only Latin letters or a hyphen. At least 3 characters that start with capital letter.',
     textSurname: 'The surname can contain only Latin letters or a hyphen. At least 4 characters that start with capital letter.',
@@ -38,6 +39,7 @@ export default function createLoginForm(): HTMLFormElement {
 
     const form = new BaseHTMLElementClass('div', ['login-form']);
     form.appendChilds([nameBlockObj.nameBlock, surnameBlockObj.nameBlock, submitButton.getElement()]);
+    const welcomeForm = createWelcomeForm();
 
     submitButton.addEventListener('click', (event: Event) => {
         event.preventDefault(); 
@@ -47,6 +49,7 @@ export default function createLoginForm(): HTMLFormElement {
         if(validateInput(name,2)){
             nameBlockObj.errorBlock.setTextContent('');
             nameBlockObj.nameInputElement.removeClass('error');
+            
         }else{
             nameBlockObj.errorBlock.setTextContent(errorMsg.textName);
             nameBlockObj.nameInputElement.addClass('error');
@@ -61,6 +64,8 @@ export default function createLoginForm(): HTMLFormElement {
         }
         if(validateInput(name,2)&&validateInput(surname,3)){
             saveToLocalstorage({name:name,surname:surname});
+            document.body.innerHTML = '' 
+            document.body.appendChild(welcomeForm);
         }
   
     });
