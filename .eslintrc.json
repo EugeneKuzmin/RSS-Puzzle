@@ -18,5 +18,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "prettier/prettier": ["error", { "endOfLine": "auto" }],
+        "no-undef": "off"
     }
 }
