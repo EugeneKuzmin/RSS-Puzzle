@@ -1,16 +1,17 @@
-import BaseHTMLElementClass from '../../BaseHTMLElementClass';
+import BaseHTMLElementClass from '../../BaseHTMLElementClass.ts';
+
 export default class ImageManager extends BaseHTMLElementClass {
-    constructor(classes: string[] = [], src: string = '', alt: string = '') {
-        super('img', classes);
-        this.setSource(src);
-        this.setAlt(alt);
-    }
+  constructor(classes: string[] = [], src: string = '', alt: string = '') {
+    super('img', classes);
+    this.setSource(src);
+    this.setAlt(alt);
+  }
 
-    setSource(src: string): void {
-        this.element.setAttribute('src', src);
-    }
+  setSource(src: string): void {
+    this.element.setAttribute('src', src);
+  }
 
-    setAlt(alt: string): void {
-        this.element.setAttribute('alt', alt);
-    }
+  setAlt(alt: string): void {
+    this.element.setAttribute('alt', alt);
+  }
 }
