@@ -1,12 +1,17 @@
-/* body{
-    background-color: rgb(246, 142, 142);
-} */
-.flex {
-  display: flex;
+:root {
+  --color-sakhara-sand: #ffb650;
+  --color-light-pink: #ff80bf;
+  --color-pink: #ef5097;
+  --color-dark-blue: #6868ac;
+  --color-blue: #90b1e0;
 }
 
-.justify-content-center {
-  justify-content: center;
+body {
+  font-family: sans-serif;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .game-name {
@@ -22,11 +27,110 @@
 
 .caprasimo-regular {
   font-family: 'Caprasimo', serif;
-  font-weight: 900;
+  font-weight: 500;
   font-style: normal;
 }
 
 .image-class {
   width: 500px;
   height: 500px;
+}
+
+.greeting-welcome {
+  font-size: 3rem;
+  margin: 10rem 5rem 1rem 5rem;
+
+  text-shadow:
+    3px 3px 0 var(--color-light-pink),
+    6px 6px 0 var(--color-pink),
+    9px 9px var(--color-dark-blue),
+    12px 12px 0 var(--color-sakhara-sand);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-blue);
+
+  animation:
+    shadows 1.2s ease-in infinite,
+    move 1.2s ease-in infinite;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-light-pink);
+  }
+  20% {
+    text-shadow:
+      3px 3px 0 var(--color-light-pink),
+      6px 6px 0 var(--color-pink);
+  }
+  30% {
+    text-shadow:
+      3px 3px 0 var(--color-light-pink),
+      6px 6px 0 var(--color-pink),
+      9px 9px var(--color-dark-blue);
+  }
+  40% {
+    text-shadow:
+      3px 3px 0 var(--color-light-pink),
+      6px 6px 0 var(--color-pink),
+      9px 9px var(--color-dark-blue),
+      12px 12px 0 var(--color-sakhara-sand);
+  }
+  50% {
+    text-shadow:
+      3px 3px 0 var(--color-light-pink),
+      6px 6px 0 var(--color-pink),
+      9px 9px var(--color-dark-blue),
+      12px 12px 0 var(--color-sakhara-sand);
+  }
+  60% {
+    text-shadow:
+      3px 3px 0 var(--color-light-pink),
+      6px 6px 0 var(--color-pink),
+      9px 9px var(--color-dark-blue),
+      12px 12px 0 var(--color-sakhara-sand);
+  }
+  70% {
+    text-shadow:
+      3px 3px 0 var(--color-light-pink),
+      6px 6px 0 var(--color-pink),
+      9px 9px var(--color-dark-blue);
+  }
+  80% {
+    text-shadow:
+      3px 3px 0 var(--color-light-pink),
+      6px 6px 0 var(--color-pink);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-light-pink);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-6px, -6px);
+  }
+  50% {
+    transform: translate(-6px, -6px);
+  }
+  60% {
+    transform: translate(-6px, -6px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.greeting-name {
+  font-size: 7rem;
+  color: rgb(82, 2, 69);
 }

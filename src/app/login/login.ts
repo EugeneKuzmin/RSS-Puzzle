@@ -1,4 +1,4 @@
-import './loginStyles.css';
+import './LoginStyles.css';
 import validateInput from '../utils/validation.ts';
 import BaseHTMLElementClass from '../BaseHTMLElementClass.ts';
 import LocalStorageManager from '../utils/localStorageWorkflow.ts';
