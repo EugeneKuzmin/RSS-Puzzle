@@ -2,31 +2,31 @@
     background-color: rgb(246, 142, 142);
 } */
 .flex {
-    display: flex;
+  display: flex;
 }
 
-.justify-content-center{
-    justify-content: center;
+.justify-content-center {
+  justify-content: center;
 }
 
-.game-name{
-    margin: 3rem 5rem;
-    font-size: 5em;
+.game-name {
+  margin: 3rem 5rem;
+  font-size: 5em;
 }
 
-.game-description{
-    font-size: 2em;
-    margin-inline: 3rem;
-    text-align: center;
+.game-description {
+  font-size: 2em;
+  margin-inline: 3rem;
+  text-align: center;
 }
 
 .caprasimo-regular {
-    font-family: "Caprasimo", serif;
-    font-weight: 900;
-    font-style: normal;
-  }
+  font-family: 'Caprasimo', serif;
+  font-weight: 900;
+  font-style: normal;
+}
 
-  .image-class{
-    width: 500px;
-    height: 500px;
-  }
+.image-class {
+  width: 500px;
+  height: 500px;
+}
