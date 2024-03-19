@@ -43,8 +43,7 @@ function createNameInputBlock(nameStr: string): nameObj {
 }
 
 function saveToLocalstorage(namesObj: namesType): void {
-  const localStorageManager = new LocalStorageManager();
-  localStorageManager.save('rss_puzzle__user', namesObj);
+  LocalStorageManager.save('rss_puzzle__user', namesObj);
 }
 
 export default function createLoginForm(): HTMLFormElement {
