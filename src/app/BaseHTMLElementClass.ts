@@ -1,4 +1,3 @@
-// type EventListenerOrEventListenerObject = EventListener | EventListenerObject;
 export default class BaseHTMLElementClass {
   element: HTMLElement;
 

@@ -1,4 +1,4 @@
-import createLoginForm from './app/login/login.ts';
+import createLoginForm from './app/components/login/login.ts';
 
 const form = createLoginForm();
 
