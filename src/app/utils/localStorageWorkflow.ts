@@ -8,4 +8,8 @@ export default class LocalStorageManager {
     const data = localStorage.getItem(key);
     return data ? JSON.parse(data) : null;
   }
+
+  static remove(): void {
+    localStorage.removeItem('rss_puzzle__user');
+  }
 }

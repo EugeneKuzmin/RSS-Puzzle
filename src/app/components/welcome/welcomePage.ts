@@ -2,6 +2,7 @@ import './welcomeStyles.css';
 import BaseHTMLElementClass from '../../BaseHTMLElementClass.ts';
 import LocalStorageManager from '../../utils/localStorageWorkflow.ts';
 import createMainPage from '../mainPage/mainPage.ts';
+import createLoginForm from '../login/login.ts';
 
 const ABOUT_GAME =
   'Learn English with our fun game of juggling puzzles and making sentences. You need to place words in the proper order from the given words and make a correct sentence.';
@@ -52,7 +53,23 @@ export default function createWelcomeForm(): HTMLFormElement {
     document.body.appendChild(mainPage);
   });
 
-  buttonBlock.appendChilds([buttonStart.getElement()]);
+  const buttonLogout = new BaseHTMLElementClass(
+    'button',
+    ['button-start'],
+    `LOGOUT`
+  );
+
+  buttonLogout.addEventListener('click', (event: Event) => {
+    event.preventDefault();
+    document.body.innerHTML = '';
+    const loginPage = createLoginForm();
+    document.body.appendChild(loginPage);
+  });
+
+  buttonBlock.appendChilds([
+    buttonStart.getElement(),
+    buttonLogout.getElement()
+  ]);
   const form = new BaseHTMLElementClass('div', ['welcome-form']);
   form.appendChilds([
     gameName.getElement(),
