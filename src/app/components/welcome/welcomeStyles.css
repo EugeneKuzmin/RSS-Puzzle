@@ -10,6 +10,14 @@ body {
   font-family: sans-serif;
 }
 
+.flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
 .text-center {
   text-align: center;
 }
@@ -132,5 +140,28 @@ body {
 
 .greeting-name {
   font-size: 7rem;
-  color: rgb(82, 2, 69);
+  color: #520245;
+}
+
+.button-start {
+  margin-top: 3rem;
+  padding: 1.5rem 4rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+
+  font-size: 1.1rem;
+  color: #7effd5;
+  background-color: #4d8ea8;
+  letter-spacing: 0.5rem;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+
+.button-start:hover {
+  cursor: pointer;
+  background-color: #9ecaed;
+  box-shadow: 0 0 15px #9ecaed;
+  color: white;
+  transition: all 0.3s ease;
 }

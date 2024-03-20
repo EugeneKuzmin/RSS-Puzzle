@@ -1,0 +1,11 @@
+/* body{
+    background-color: rgb(242, 222, 191);
+} */
+
+.flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}

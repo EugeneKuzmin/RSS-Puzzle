@@ -1,7 +1,7 @@
 import './LoginStyles.css';
-import validateInput from '../utils/validation.ts';
-import BaseHTMLElementClass from '../BaseHTMLElementClass.ts';
-import LocalStorageManager from '../utils/localStorageWorkflow.ts';
+import validateInput from '../../utils/validation.ts';
+import BaseHTMLElementClass from '../../BaseHTMLElementClass.ts';
+import LocalStorageManager from '../../utils/localStorageWorkflow.ts';
 import createWelcomeForm from '../welcome/welcomePage.ts';
 
 const errorMsg = {
@@ -61,7 +61,8 @@ export default function createLoginForm(): HTMLFormElement {
     surnameBlockObj.nameBlock,
     submitButton.getElement()
   ]);
-  const welcomeForm = createWelcomeForm();
+
+  saveToLocalstorage({ name: '', surname: '' });
 
   submitButton.addEventListener('click', (event: Event) => {
     event.preventDefault();
@@ -86,6 +87,7 @@ export default function createLoginForm(): HTMLFormElement {
     if (validateInput(name, 2) && validateInput(surname, 3)) {
       saveToLocalstorage({ name, surname });
       document.body.innerHTML = '';
+      const welcomeForm = createWelcomeForm();
       document.body.appendChild(welcomeForm);
     }
   });
