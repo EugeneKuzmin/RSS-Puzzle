@@ -1,5 +1,5 @@
 import './mainPageStyle.css';
-import BaseHTMLElementClass from '../../BaseHTMLElementClass';
+import BaseHTMLElementClass from '../../BaseHTMLElementClass.ts';
 
 export default function createMainPage(): HTMLFormElement {
   const nameBlock = new BaseHTMLElementClass(
