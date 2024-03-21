@@ -1,4 +1,4 @@
-body{
+body {
 }
 
 .flex {
@@ -9,45 +9,43 @@ body{
   align-items: center;
 }
 
-.flex-column{
-    flex-direction: column;
+.flex-column {
+  flex-direction: column;
 }
 
 .puzzle-container {
-    width: min(40rem,90%);
-    height: 30rem;
-    border: 5px solid rgb(130, 208, 237);
-    margin: 1rem 1rem 8rem 1rem;
+  width: min(40rem, 90%);
+  height: 30rem;
+  border: 5px solid rgb(130, 208, 237);
+  margin: 1rem 1rem 8rem 1rem;
 }
 
-.pickword-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: min(70rem,90%);
-    height: 5rem;
-    margin-top: auto;
-    border: 5px solid rgb(174, 236, 244);
-    padding: 0.3rem;
+.pickword-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: min(70rem, 90%);
+  height: 5rem;
+  margin-top: auto;
+  border: 5px solid rgb(174, 236, 244);
+  padding: 0.3rem;
 }
 
 .word-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    height: auto;
-    background: none;
-    color: rgba(186, 252, 252, 0.704);
-    font-size: 1rem;
-    font-weight: 500;
-    margin-inline: .2rem;
-    border: 3px solid #dfe6ec;
-    flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: auto;
+  background: none;
+  color: rgba(186, 252, 252, 0.704);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-inline: 0.2rem;
+  border: 3px solid #dfe6ec;
+  flex-grow: 1;
 }
 
-.word-button{
-    cursor: pointer;
-} 
-
-
+.word-button {
+  cursor: pointer;
+}

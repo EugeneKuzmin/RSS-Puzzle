@@ -9,7 +9,7 @@ const surname = playersName ? playersName.surname : '';
 
 let form;
 
-if (name.length&&surname.length) {
+if (name.length && surname.length) {
   form = createWelcomeForm();
 } else {
   form = createLoginForm();
