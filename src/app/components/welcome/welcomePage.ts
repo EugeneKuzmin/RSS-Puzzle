@@ -10,7 +10,7 @@ export default function createWelcomeForm(): HTMLFormElement {
   const gameName = new BaseHTMLElementClass(
     'div',
     ['text-center', 'game-name', 'caprasimo-regular'],
-    'RSS Puzzle'
+    'English Puzzle'
   );
   const gameDescription = new BaseHTMLElementClass(
     'div',
