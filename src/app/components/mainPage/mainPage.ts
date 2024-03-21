@@ -5,7 +5,12 @@ import BaseHTMLElementClass from '../../BaseHTMLElementClass.ts';
 const URL:string = 'https://raw.githubusercontent.com/rolling-scopes-school/rss-puzzle-data/main/data/wordCollectionLevel1.json'
 
 interface Word {
+    audioExample: string;
     textExample: string;
+    textExampleTranslate: string;
+    id: number;
+    word: string;
+    wordTranslate: string;
 }
 
 interface LevelData {
@@ -17,8 +22,6 @@ interface LevelData {
     year: string;
 }
 
-
-
 interface Round {
     levelData: LevelData;
     words: Word[];
@@ -28,15 +31,14 @@ interface ObjectWithLevelDataAndWords {
     rounds: Round[];
 }
 
-
-
-function transformArray(array: ObjectWithLevelDataAndWords[]): { words: string[] }[] {
-    return array.rounds.map(round  => ({
-        words: round.words.map(word => word.textExample)
+function transformArray(array: ObjectWithLevelDataAndWords): { words: string[] }[] {
+ 
+    return array.rounds.map((round:Round)  => ({
+        words: round.words.map((word:Word) => word.textExample)
     }));
 }
 
-async function fetchData(url: string): Promise<ObjectWithLevelDataAndWords[]> {
+async function fetchData(url: string): Promise<ObjectWithLevelDataAndWords> {
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -45,7 +47,7 @@ async function fetchData(url: string): Promise<ObjectWithLevelDataAndWords[]> {
         return await response.json();
     } catch (error) {
         console.error('Error fetching data:', error);
-        return []; // Return empty array in case of error
+        return {rounds:[]}; 
     }
 }
 
@@ -54,29 +56,6 @@ async function fetchDataAndTransform(url: string): Promise<{ words: string[] }[]
     
     return transformArray(data);
 }
-
-type wordObjType = {word:string[][]}
-
-// async function getWords():Promise<wordObjType>{
-
-//     var wordsCollection
-
-// const result = await fetch('https://raw.githubusercontent.com/rolling-scopes-school/rss-puzzle-data/main/data/wordCollectionLevel1.json')
-//     .then((response) => response.json())
-//     .then((json) => {
-//         console.log(json);
-//         wordsCollection = transformArray(json.rounds);
-        
-//     }
-//     )
-//     .catch((err) => new Error(err))
-
-//     return wordsCollection
-
-
-// }
-
-
 
 
 function getPuzzleContainer():HTMLFormElement{

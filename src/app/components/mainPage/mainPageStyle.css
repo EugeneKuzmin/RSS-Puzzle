@@ -37,11 +37,10 @@ body{
     justify-content: center;
     width: fit-content;
     height: auto;
-    padding: 1rem;
     background: none;
     color: rgba(186, 252, 252, 0.704);
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
     margin-inline: .2rem;
     border: 3px solid #dfe6ec;
     flex-grow: 1;
